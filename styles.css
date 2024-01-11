@@ -1,0 +1,165 @@
+@import url('https://fonts.cdnfonts.com/css/gameovercre');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-white: rgb(255,255,255);
+    --color-black: rgb(0, 0, 0);
+    --text-shadow1: 5px 4px 1px rgb(0, 0, 91);
+    --text-shadow2: 4px 3px 1px rgb(91, 0, 0);
+    --font-: 'gameovercre', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(./img_and_sound/asteroid-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.content-game, .modal-start {
+    width: 850px;
+    min-height: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.player-info{
+    display: none;
+    color: var(--color-white);
+    position: absolute;
+    top: 5%;
+    justify-content: space-between;
+    width: 750px;
+    font-family: var(--font-);
+    font-size: 2rem;
+}
+
+.modal-start{
+    background: none;
+    position: absolute;
+    border: none;
+}
+
+/* MODAL START */
+.content-modal{
+    height: 26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    place-items: center;
+    color: var(--color-white);
+    font-family: var(--font-);
+    text-transform: uppercase;
+    text-shadow: var(--text-shadow1);
+}
+.title-game{
+    font-size: 6rem;
+}
+.start-btn{
+    width: 10rem;
+    border: none;
+    font-family: var(--font-);
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: var(--color-white);
+    background: none;
+    transform: translateY(0);
+    text-shadow: var(--text-shadow1);
+    transition: all .5s ease-in-out;
+}
+.start-btn:hover{
+    color: rgb(255, 255, 67);
+    transform: translateY(-3px);
+    text-shadow: var(--text-shadow2);
+    cursor: pointer;
+}
+
+.name-developer{
+    font-size: 1.5rem;
+}
+
+/* MODAL GameOver */
+.modal-gameover{
+    background-color: rgb(0, 0, 0, .9);
+    position: absolute;
+    width: 850px;
+    min-height: 100vh;
+    border: none;
+    justify-content: center;
+    place-items: center;
+}
+
+.content-gameover{
+    height: 14rem;
+    color: var(--color-white);
+    font-family: var(--font-);
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    place-items: center;
+    text-shadow: var(--text-shadow1);
+}
+.reset-btn{
+    width: 15rem;
+    border: none;
+    font-family: var(--font-);
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: var(--color-white);
+    background: none;
+    transform: translateY(0);
+    text-shadow: var(--text-shadow1);
+    transition: all .5s ease-in-out;
+}
+.reset-btn:hover{
+    color: rgb(255, 255, 67);
+    transform: translateY(-3px);
+    text-shadow: var(--text-shadow2);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+    .content-game, .modal-start, .modal-gameover{ width: 700px; }
+    .player-info { width: 650px; }
+}
+
+@media screen and (max-width: 700px) {
+    .content-game, .modal-start, .modal-gameover{ width: 100%; }
+    .player-info { width: 550px; }
+}
+
+@media screen and (max-width: 570px) {
+    .title-game, .name-developer, .content-gameover{ text-align: center; }
+    .title-game{ font-size: 3.5rem; }
+    .content-gameover{ font-size: 2.5rem; }
+    .player-info { width: 450px; }
+}
+
+@media screen and (max-width: 475px) {
+    .content-gameover{ height: 18rem; }
+    .player-info { width: 350px; }
+}
+
+@media screen and (max-width: 450px) {
+    .content-gameover{ height: 18rem; }
+    .player-info { 
+        width: 200px;
+        left: 5%;
+        flex-direction: column;
+        place-items: left;
+        gap: .5rem;
+        font-size: 1.5rem;
+    }
+}
