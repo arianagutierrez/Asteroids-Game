@@ -1,6 +1,6 @@
 # Asteroids Game
 
-I have developed an almost identical replica of the famous arcade game [Asteroids]() using JavaScript, HTML, and CSS. 
+I have developed an almost identical replica of the famous arcade game [Asteroids](https://asteroids-game-carlagg.netlify.app/) using JavaScript, HTML, and CSS. 
 
 ## Controls
 - Use the keys (A,W,S or Left, Up, Right) to move the player.
